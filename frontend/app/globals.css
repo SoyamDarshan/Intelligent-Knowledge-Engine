@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Vibrant Midnight Theme */
+    --background: 260 20% 4%;
+    /* Very dark deep violet/black */
+    --foreground: 210 40% 98%;
+
+    --card: 260 20% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 260 20% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 265 89% 66%;
+    /* Vibrant Purple */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 260 15% 12%;
+    /* Darker violet/grey mix */
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 260 15% 12%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 265 89% 66%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 260 20% 15%;
+    --input: 260 20% 15%;
+    --ring: 265 89% 66%;
+
+    --radius: 1rem;
+  }
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /* Prevent body scroll, handle in components */
+}
+
+body {
+  @apply bg-background text-foreground antialiased selection:bg-primary/20 selection:text-primary;
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-black/40 backdrop-blur-xl border border-white/5 shadow-2xl;
+  }
+
+  .glass-button {
+    @apply transition-all duration-300 hover:shadow-[0_0_20px_rgba(168, 85, 247, 0.3)] hover:scale-105 active:scale-95;
+  }
+}
+
+/* Custom Scrollbar to be sleek */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-white/10 rounded-full hover:bg-primary/50 transition-colors;
+}
