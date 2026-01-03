@@ -25,12 +25,11 @@ I.K.E. transforms static documents (PDFs, Text) into an interactive neural core.
 - **WSL2** (If on Windows)
 - **Git**
 
-### 📦 Initial Local Setup
-1.  **Clone or Initialize**:
+### 📦 Quick Start (Run Locally)
+1.  **Clone the Repository**:
     ```bash
-    git init
-    git add .
-    git commit -m "Initial commit"
+    git clone https://github.com/SoyamDarshan/Intelligent-Knowledge-Engine.git
+    cd Intelligent-Knowledge-Engine
     ```
 
 2.  **Launch the Stack**:
@@ -46,22 +45,25 @@ I.K.E. transforms static documents (PDFs, Text) into an interactive neural core.
     docker-compose exec ollama ollama pull nomic-embed-text
     ```
 
-### 🔗 Connecting to GitHub
-To push this project to a new GitHub repository:
+### 🤝 Contributing & Making Changes
+To contribute or customize I.K.E. for your own use:
 
-1.  **Create a Repository**: Go to [GitHub](https://github.com/new) and create a new repository (empty, no README/License).
-2.  **Add Remote**:
+1.  **Fork the Repository**: Click the **Fork** button at the top of the [GitHub page](https://github.com/SoyamDarshan/Intelligent-Knowledge-Engine).
+2.  **Clone Your Fork**:
     ```bash
-    git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+    git clone https://github.com/YOUR_USERNAME/Intelligent-Knowledge-Engine.git
+    cd Intelligent-Knowledge-Engine
     ```
-3.  **Rename Branch** (Optional but recommended):
+3.  **Create a Feature Branch**:
     ```bash
-    git branch -M main
+    git checkout -b feature/amazing-new-feature
     ```
-4.  **Push Code**:
+4.  **Commit & Push**:
     ```bash
-    git push -u origin main
+    git commit -m "feat: add some amazing feature"
+    git push origin feature/amazing-new-feature
     ```
+5.  **Open a Pull Request**: Submit your changes back to the main repository for review.
 
 ### 🌐 Access
 - **Frontend UI**: [http://localhost:3000](http://localhost:3000)
